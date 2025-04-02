@@ -1,41 +1,95 @@
+/* Styles pour la section des symptômes */
+
 
 .container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 2rem;
+  color: #7950b3;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
+.container > p {
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Grille de cartes des symptômes */
 .prevention-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/* Style des cartes individuelles */
 .card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card img {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.card-content {
+  flex: 1;
 }
 
 .card h2 {
-  color: #007bff;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
+  color: #7950b3;
+  font-size: 20px;
+  margin: 0 0 10px 0;
 }
 
 .card p {
-  color: #666;
-  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .prevention-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .card-content {
+    text-align: center;
+  }
 }
