@@ -1,0 +1,6 @@
+[
+  { "name": "Forte fièvre", "description": "Une forte fièvre due à la Covid-19...", "img": "./assets/img/fievre.png" },
+  { "name": "Toux", "description": "La toux due à la Covid-19...", "img": "./assets/img/toux.png" },
+  { "name": "Gorge irritée", "description": "L'odynophagie aiguë...", "img": "./assets/img/gorge.png" },
+  { "name": "Migraine", "description": "La migraine après COVID-19...", "img": "./assets/img/tete.png" }
+]

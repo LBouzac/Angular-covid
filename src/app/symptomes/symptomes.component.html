@@ -1,18 +1,14 @@
-<!-- Section des symptômes -->
 <div class="container">
   <h1>Symptôme du Coronavirus</h1>
   <p style="accent-color: #7950b3"> Le coronavirus, également connu sous le nom de SARS-CoV-2, est un virus qui a provoqué la pandémie de COVID-19. </p>
 
-      <div class="prevention-cards">
-
-      <div class="card" *ngFor="let symptome of symptomes">
-
-            <img src="{{ symptome.img }}" alt="Migraine">
-            <div class="card-content">
-              <h3>{{ symptome.name }}</h3>
-              <p>{{ symptome.description }}</p>
-            </div>
-            </div>
-
+  <div class="prevention-cards">
+    <div class="card" *ngFor="let symptome of symptomes$ | async">
+      <img src="{{ symptome.img }}" alt="{{ symptome.name }}">
+      <div class="card-content">
+        <h3>{{ symptome.name }}</h3>
+        <p>{{ symptome.description }}</p>
       </div>
     </div>
+  </div>
+</div>
