@@ -1,17 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { AsyncPipe, NgForOf } from '@angular/common';
+import { Observable } from 'rxjs';
+import { BlogService } from './blog.services';
+import { BlogsList } from './blog.services';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
+  imports: [
+    AsyncPipe,
+    NgForOf,
+    FormsModule
+  ],
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  blog$: Observable<BlogsList[]>;
+  name: string = '';
+  content: string = '';
 
-  ngOnInit(): void {
-    this.logWithStyle('Bienvenue sur le blog!');
+  constructor(private blogService: BlogService) {
+    this.blog$ = this.blogService.blogs$;
   }
 
-  logWithStyle(message: string): void {
-    console.log('%c' + message, 'color: blue; font-size: 20px; font-weight: bold;');
+  addBlog(): void {
+    this.blogService.addBlog(this.name, this.content);
   }
+
+  ngOnInit(): void {}
 }

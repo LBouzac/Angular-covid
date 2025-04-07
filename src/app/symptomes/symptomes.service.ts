@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 import { map } from 'rxjs';
 
-const obs$ = ajax.getJSON('./assets/symptomes.json').pipe(
+const obs$ = ajax.getJSON('./assets/json/symptomes.json').pipe(
   map((data: any) => {
     const symptomes = data.map((item: any) => ({
       name: item.name,
