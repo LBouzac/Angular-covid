@@ -1,39 +1,18 @@
 <!-- Section des symptômes -->
 <div class="container">
   <h1>Symptôme du Coronavirus</h1>
-  <p style="accent-color: #7950b3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum blanditiis pariatur aut amet debitis nam, deleniti labore reiciendis molestias minima vero nemo iure velit tenetur eum? Quos, harum sapiente provident.</p>
+  <p style="accent-color: #7950b3"> Le coronavirus, également connu sous le nom de SARS-CoV-2, est un virus qui a provoqué la pandémie de COVID-19. </p>
 
-  <div class="prevention-cards">
-    <div class="card">
-      <img src="assets/img/fievre.png" alt="Fièvre">
-      <div class="card-content">
-        <h2>Forte fièvre</h2>
-        <p>Une forte fièvre dans le cadre de la COVID-19 est généralement définie comme une température supérieure à 39 °C et peut être un signe d'infection, mais elle peut également être absente ou légère chez certaines personnes.</p>
+      <div class="prevention-cards">
+
+      <div class="card" *ngFor="let symptome of symptomes">
+
+            <img src="{{ symptome.img }}" alt="Migraine">
+            <div class="card-content">
+              <h3>{{ symptome.name }}</h3>
+              <p>{{ symptome.description }}</p>
+            </div>
+            </div>
+
       </div>
     </div>
-
-    <div class="card">
-      <img src="assets/img/toux.png" alt="Toux">
-      <div class="card-content">
-        <h2>Toux</h2>
-        <p>La toux due à la Covid-19 se distingue par ses intonations spécifiques et peut être légère ou persistante, mais elle devient rarement chronique; pour confirmer la présence du virus, un test de dépistage PCR est nécessaire.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/img/gorge.png" alt="Gorge irritée">
-      <div class="card-content">
-        <h2>Gorge irritée</h2>
-        <p>L'odynophagie aiguë est un nouveau symptôme du Covid-19, particulièrement associé au variant Omicron, se manifestant par un mal de gorge persistant et des douleurs lors de la déglutition.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/img/tete.png" alt="Migraine">
-      <div class="card-content">
-        <h2>Migraine</h2>
-        <p>La migraine après COVID-19 peut survenir en raison de l'impact du virus sur les nerfs et d'une augmentation du stress, affectant ainsi la qualité de vie ; elle peut durer de quelques heures à plusieurs jours et nécessite souvent un traitement par médicaments antidouleur ou triptans.</p>
-      </div>
-    </div>
-  </div>
-</div>
